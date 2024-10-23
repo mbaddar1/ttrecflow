@@ -1,0 +1,141 @@
+"swissroll-3d-sklearn"
+python train_eval_linear_recflow.py --seed 42 --dataset-name swissroll-3d-sklearn --bases rbf --length-scale 0.5
+    --n-centers 20 --odesolve-method-nn euler --odesolve-method-tt rk4 --rank 5 --verbose 2
+
+Time
+2024-09-26 16:25:00.342 | INFO     | __main__:<module>:147 - Training time for Recflow-NN = 170 seconds
+2024-09-26 16:25:05.412 | INFO     | __main__:<module>:151 - Inference time for NN-RecFlow = 5 seconds
+
+2024-09-26 16:34:58.553 | INFO     | flow_matching.training:train_tt_recflow:144 - Training time for Recflow-TT = 589 seconds
+2024-09-26 16:36:24.959 | INFO     | __main__:<module>:228 - Inference time for TT-RecFlow 86 seconds
+
+Memory
+
+2024-09-26 16:34:58.553 | INFO     | __main__:<module>:200 - For NN-RecFlow , numel = 10903
+2024-09-26 16:34:58.553 | INFO     | __main__:<module>:201 - For TT-Recflow , numel = 3600
+2024-09-26 16:34:58.553 | INFO     | __main__:<module>:202 - Memory compression ratio = -0.6698156470696138
+
+Quality
+2024-09-26 16:36:30.955 | INFO     | flow_matching.viz:plot_results:181 - Sinkhorn value for model : nn = 0.3068691723778666
+2024-09-26 16:36:37.172 | INFO     | flow_matching.viz:plot_results:181 - Sinkhorn value for model : tt = 0.2030406089932131
+
+__________________________________
+"swissroll-3d-sklearn"
+python train_eval_linear_recflow.py --seed 42 --dataset-name swissroll-3d-sklearn --bases rbf --length-scale 0.5
+    --n-centers 20 --odesolve-method-nn euler --odesolve-method-tt rk4 --rank 6 --verbose 2
+Time
+2024-09-26 11:44:16.429 | INFO     | __main__:<module>:147 - Training time for Recflow-NN = 177 seconds
+2024-09-26 11:44:23.495 | INFO     | __main__:<module>:151 - Inference time for NN-RecFlow = 7 seconds
+
+2024-09-26 12:06:21.431 | INFO     | flow_matching.training:train_tt_recflow:144 - Training time for Recflow-TT = 1313 seconds
+2024-09-26 12:06:21.432 | INFO     | __main__:<module>:213 - Inferring with N_time_steps = 2000 with method rk4
+2024-09-26 12:07:51.743 | INFO     | __main__:<module>:228 - Inference time for TT-RecFlow 90 seconds
+
+Memory
+2024-09-26 12:06:21.432 | INFO     | __main__:<module>:202 - Memory compression ratio = -0.5377419058974594
+
+Quality
+2024-09-26 12:07:59.556 | INFO     | flow_matching.viz:plot_results:183 - Sinkhorn value for model : nn = 0.3068691723778666
+2024-09-26 12:08:06.709 | INFO     | flow_matching.viz:plot_results:183 - Sinkhorn value for model : tt = 0.19821435551512306
+
+Output Viz
+generated_recflow_nn_tt_rank_6_rbf_l_0.5_m_20.png
+=======================================
+"swissroll-3d-sklearn"
+****************************
+python train_eval_linear_recflow.py --seed 42 --dataset-name swissroll-3d-sklearn --bases rbf --length-scale 0.5 --n-centers 30 --odesolve-method-nn euler --odesolve-method-tt rk4 --rank 7 --verbose 2
+
+Time
+2024-09-26 09:13:40.157 | INFO     | __main__:<module>:148 - Training time for Recflow-NN = 183 seconds
+2024-09-26 09:13:47.480 | INFO     | __main__:<module>:152 - Inference time for NN-RecFlow = 7 seconds
+
+2024-09-26 10:37:24.878 | INFO     | flow_matching.training:train_tt_recflow:144 - Training time for Recflow-TT = 5012 seconds
+2024-09-26 10:39:40.226 | INFO     | __main__:<module>:229 - Inference time for TT-RecFlow 135 seconds
+
+Memory
+2024-09-26 10:37:24.879 | INFO     | __main__:<module>:200 - ***Memory Size Comparison***
+2024-09-26 10:37:24.879 | INFO     | __main__:<module>:201 - For NN-RecFlow , numel = 10903
+2024-09-26 10:37:24.879 | INFO     | __main__:<module>:202 - For TT-Recflow , numel = 10080
+2024-09-26 10:37:24.879 | INFO     | __main__:<module>:203 - Memory compression ratio = -0.07548381179491882
+
+Quality
+2024-09-26 10:39:48.068 | INFO     | flow_matching.viz:plot_results:183 - Sinkhorn value for model : nn = 0.3068691723778666
+2024-09-26 10:39:53.172 | INFO     | flow_matching.viz:plot_results:183 - Sinkhorn value for model : tt = 0.2124819559775022
+
+Output Viz
+generated_recflow_nn_tt_rank_7_rbf_l_0.5_m_30.png
+
+================================================================================================================
+"circles-sklearn"
+***********************
+--seed
+42
+--dataset-name
+"circles-sklearn"
+--bases
+"rbf"
+--length-scale
+0.5
+--odesolve-method-nn
+"euler"
+--odesolve-method-tt
+"rk4"
+--rank
+3
+--verbose
+2
+
+Accuracy
+generated_recflow_nn_tt_rank_3_rbf_l_0.5.png
+
+Runtime
+2024-09-11 10:56:00.725 | INFO     | __main__:<module>:161 - Training time for Recflow-NN = 158 seconds
+2024-09-11 10:56:05.983 | INFO     | __main__:<module>:165 - Inference time for NN-RecFlow = 5 seconds
+
+2024-09-11 10:57:08.148 | INFO     | flow_matching.training:train_tt_recflow:144 - Training time for Recflow-TT = 57 seconds
+2024-09-11 10:57:51.902 | INFO     | __main__:<module>:261 - Inference time for TT-RecFlow 43 seconds
+
+Memory
+2024-09-11 10:57:08.149 | INFO     | __main__:<module>:234 - For NN-RecFlow , numel = 10702
+2024-09-11 10:57:08.149 | INFO     | __main__:<module>:235 - For TT-Recflow , numel = 600
+2024-09-11 10:57:08.149 | INFO     | __main__:<module>:236 - Memory compression ratio = -0.9439357129508503
+----------------------------------------------------------------------------------------------------------------------------------
+swissroll sklearn
+*********
+train_eval_linear_recflow.py --seed 42 --dataset-name swissroll-sklearn --bases rbf --length-scale 0.5 --odesolve-method-nn euler --odesolve-method-tt rk4 --rank 6 --verbose 2
+
+Accuracy
+generated_recflow_nn_tt_rank_6_rbf_l_0.5.png
+
+Run time
+2024-09-11 11:56:21.494 | INFO     | __main__:<module>:161 - Training time for Recflow-NN = 159 seconds
+2024-09-11 11:56:26.152 | INFO     | __main__:<module>:165 - Inference time for NN-RecFlow = 4 seconds
+
+2024-09-11 12:03:18.030 | INFO     | flow_matching.training:train_tt_recflow:144 - Training time for Recflow-TT = 407 seconds
+2024-09-11 12:04:04.609 | INFO     | __main__:<module>:262 - Inference time for TT-RecFlow 46 seconds
+
+Memory Size
+
+2024-09-11 12:03:18.030 | INFO     | __main__:<module>:235 - For NN-RecFlow , numel = 10702
+2024-09-11 12:03:18.031 | INFO     | __main__:<module>:236 - For TT-Recflow , numel = 1920
+2024-09-11 12:03:18.031 | INFO     | __main__:<module>:237 - Memory compression ratio = -0.820594281442721
+
+===========================================================================
+moons-sklearn
+***************
+train_eval_linear_recflow.py --seed 42 --dataset-name moons-sklearn --bases rbf --length-scale 0.5
+    --odesolve-method-nn euler --odesolve-method-tt rk4 --rank 5 --verbose 2
+
+Accuracy
+generated_recflow_nn_tt_rank_5_rbf_l_1.0.png
+
+Runtime
+2024-09-11 13:08:45.083 | INFO     | __main__:<module>:161 - Training time for Recflow-NN = 163 seconds
+2024-09-11 13:08:49.714 | INFO     | __main__:<module>:165 - Inference time for NN-RecFlow = 4 seconds
+2024-09-11 13:12:43.534 | INFO     | flow_matching.training:train_tt_recflow:144 - Training time for Recflow-TT = 228 seconds
+2024-09-11 13:13:29.398 | INFO     | __main__:<module>:262 - Inference time for TT-RecFlow 45 seconds
+
+Memory
+2024-09-11 13:12:43.535 | INFO     | __main__:<module>:235 - For NN-RecFlow , numel = 10702
+2024-09-11 13:12:43.535 | INFO     | __main__:<module>:236 - For TT-Recflow , numel = 1400
+2024-09-11 13:12:43.535 | INFO     | __main__:<module>:237 - Memory compression ratio = -0.8691833302186507

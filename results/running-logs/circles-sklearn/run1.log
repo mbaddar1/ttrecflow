@@ -1,0 +1,647 @@
+
+Running with GPU and Double Tensor
+_______________
+/home/mbaddar/Documents/mbaddar/phd/tt-flow-matching/.venv/bin/python /home/mbaddar/Documents/mbaddar/phd/tt-flow-matching/train_eval_linear_recflow.py --seed 42 --dataset-name circles-sklearn --bases rbf --length-scale 0.3 --n-centers 25 --odesolve-method-nn euler --odesolve-method-tt rk4 --rank 8 --verbose 2
+[KeOps] Warning : Cuda libraries were not detected on the system or could not be loaded ; using cpu only mode
+2024-10-14 09:52:39.196 | INFO     | __main__:<module>:92 - parsed args : Namespace(seed=42, dataset_name='circles-sklearn', odesolve_method_nn='euler', odesolve_method_tt='rk4', rank=8, bases='rbf', length_scale=0.3, n_centers=25, remove_outliers=False, verbose=2, tt_only=False, hopt=False, hopt_max_evals=100)
+2024-10-14 09:52:40.746 | INFO     | __main__:<module>:104 - use_cuda = True, dtype = <class 'torch.cuda.DoubleTensor'>
+2024-10-14 09:52:40.761 | INFO     | __main__:<module>:127 - Setting data_dim=2 as args.dataset_name = circles-sklearn
+2024-10-14 09:52:41.492 | INFO     | __main__:<module>:162 - Target: circles-sklearn
+2024-10-14 09:52:41.492 | INFO     | __main__:<module>:164 - Plotting 50000 prior and posterior samples
+training recflow-nn :   0%|          | 0/20001 [00:00<?, ?it/s]2024-10-14 09:52:46.754 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 0 => 7.744589262704016
+training recflow-nn :   0%|          | 95/20001 [00:00<02:33, 129.87it/s]2024-10-14 09:52:47.633 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 100 => 4.4329988162708345
+training recflow-nn :   1%|          | 200/20001 [00:01<02:26, 135.12it/s]2024-10-14 09:52:48.355 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 200 => 4.262530339054463
+training recflow-nn :   1%|▏         | 299/20001 [00:02<02:25, 135.09it/s]2024-10-14 09:52:49.104 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 300 => 3.953886630060807
+training recflow-nn :   2%|▏         | 397/20001 [00:03<02:26, 133.69it/s]2024-10-14 09:52:49.854 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 400 => 3.889816724594531
+training recflow-nn :   2%|▏         | 497/20001 [00:03<02:21, 137.60it/s]2024-10-14 09:52:50.587 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 500 => 3.8764063047084774
+training recflow-nn :   3%|▎         | 598/20001 [00:04<02:20, 137.63it/s]2024-10-14 09:52:51.312 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 600 => 3.8636200231168574
+training recflow-nn :   3%|▎         | 687/20001 [00:05<02:17, 140.13it/s]2024-10-14 09:52:52.025 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 700 => 3.8443193793308774
+training recflow-nn :   4%|▍         | 789/20001 [00:05<02:17, 139.59it/s]2024-10-14 09:52:52.743 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 800 => 3.7745003846655734
+training recflow-nn :   4%|▍         | 889/20001 [00:06<02:19, 137.32it/s]2024-10-14 09:52:53.464 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 900 => 3.8174080134323756
+training recflow-nn :   5%|▍         | 989/20001 [00:07<02:17, 138.58it/s]2024-10-14 09:52:54.185 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1000 => 3.776936843532681
+training recflow-nn :   5%|▌         | 1089/20001 [00:08<02:17, 137.34it/s]2024-10-14 09:52:54.906 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1100 => 3.774424957853706
+training recflow-nn :   6%|▌         | 1189/20001 [00:08<02:15, 138.63it/s]2024-10-14 09:52:55.628 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1200 => 3.7535981000860597
+training recflow-nn :   6%|▋         | 1288/20001 [00:09<02:16, 136.69it/s]2024-10-14 09:52:56.365 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1300 => 3.768989548611408
+training recflow-nn :   7%|▋         | 1389/20001 [00:10<02:15, 137.01it/s]2024-10-14 09:52:57.088 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1400 => 3.7589941634430355
+training recflow-nn :   7%|▋         | 1494/20001 [00:11<02:11, 140.95it/s]2024-10-14 09:52:57.796 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1500 => 3.745803470846493
+training recflow-nn :   8%|▊         | 1597/20001 [00:11<02:11, 139.69it/s]2024-10-14 09:52:58.520 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1600 => 3.761878685843414
+training recflow-nn :   8%|▊         | 1687/20001 [00:12<02:10, 140.81it/s]2024-10-14 09:52:59.230 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1700 => 3.757625221310213
+training recflow-nn :   9%|▉         | 1792/20001 [00:13<02:10, 139.86it/s]2024-10-14 09:52:59.947 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1800 => 3.7965879445473827
+training recflow-nn :   9%|▉         | 1895/20001 [00:13<02:08, 140.74it/s]2024-10-14 09:53:00.659 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 1900 => 3.740901562516554
+training recflow-nn :  10%|▉         | 2000/20001 [00:14<02:08, 140.36it/s]2024-10-14 09:53:01.373 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2000 => 3.73027428367448
+training recflow-nn :  10%|█         | 2090/20001 [00:15<02:07, 139.93it/s]2024-10-14 09:53:02.088 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2100 => 3.733407170476953
+training recflow-nn :  11%|█         | 2194/20001 [00:16<02:07, 139.85it/s]2024-10-14 09:53:02.803 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2200 => 3.7141654099556596
+training recflow-nn :  11%|█▏        | 2299/20001 [00:16<02:05, 140.80it/s]2024-10-14 09:53:03.513 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2300 => 3.732896673086085
+training recflow-nn :  12%|█▏        | 2400/20001 [00:17<02:10, 135.07it/s]2024-10-14 09:53:04.252 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2400 => 3.7427228557093284
+training recflow-nn :  12%|█▏        | 2487/20001 [00:18<02:06, 138.06it/s]2024-10-14 09:53:04.976 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2500 => 3.732818696931626
+training recflow-nn :  13%|█▎        | 2599/20001 [00:19<02:11, 131.96it/s]2024-10-14 09:53:05.751 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2600 => 3.732416347620386
+training recflow-nn :  13%|█▎        | 2698/20001 [00:19<02:14, 128.99it/s]2024-10-14 09:53:06.510 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2700 => 3.7318936997459917
+training recflow-nn :  14%|█▍        | 2797/20001 [00:20<02:10, 131.38it/s]2024-10-14 09:53:07.261 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2800 => 3.7334147036583065
+training recflow-nn :  14%|█▍        | 2895/20001 [00:21<02:04, 137.82it/s]2024-10-14 09:53:07.995 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 2900 => 3.7411518943683086
+training recflow-nn :  15%|█▍        | 2998/20001 [00:22<02:01, 140.49it/s]2024-10-14 09:53:08.708 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3000 => 3.7477257343260018
+training recflow-nn :  15%|█▌        | 3088/20001 [00:22<02:00, 140.82it/s]2024-10-14 09:53:09.419 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3100 => 3.7376993789365938
+training recflow-nn :  16%|█▌        | 3192/20001 [00:23<01:59, 140.34it/s]2024-10-14 09:53:10.138 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3200 => 3.7306657070840554
+training recflow-nn :  16%|█▋        | 3297/20001 [00:24<01:59, 139.52it/s]2024-10-14 09:53:10.854 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3300 => 3.74402771404018
+training recflow-nn :  17%|█▋        | 3396/20001 [00:24<01:58, 139.69it/s]2024-10-14 09:53:11.571 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3400 => 3.7274861764951197
+training recflow-nn :  17%|█▋        | 3496/20001 [00:25<01:58, 139.39it/s]2024-10-14 09:53:12.292 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3500 => 3.6993999976940164
+training recflow-nn :  18%|█▊        | 3599/20001 [00:26<01:56, 140.21it/s]2024-10-14 09:53:13.006 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3600 => 3.739036718042604
+training recflow-nn :  18%|█▊        | 3689/20001 [00:26<01:55, 140.67it/s]2024-10-14 09:53:13.717 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3700 => 3.75688235764194
+training recflow-nn :  19%|█▉        | 3794/20001 [00:27<01:55, 140.56it/s]2024-10-14 09:53:14.428 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3800 => 3.7275799378733327
+training recflow-nn :  19%|█▉        | 3898/20001 [00:28<01:55, 139.64it/s]2024-10-14 09:53:15.150 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 3900 => 3.733020530217679
+training recflow-nn :  20%|█▉        | 3996/20001 [00:29<01:55, 138.26it/s]2024-10-14 09:53:15.876 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4000 => 3.72067446203805
+training recflow-nn :  20%|██        | 4098/20001 [00:29<01:54, 138.50it/s]2024-10-14 09:53:16.600 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4100 => 3.7382563135773035
+training recflow-nn :  21%|██        | 4196/20001 [00:30<01:54, 138.00it/s]2024-10-14 09:53:17.320 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4200 => 3.7192884885850868
+training recflow-nn :  21%|██▏       | 4297/20001 [00:31<01:52, 139.52it/s]2024-10-14 09:53:18.037 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4300 => 3.724509765290193
+training recflow-nn :  22%|██▏       | 4399/20001 [00:32<01:51, 139.65it/s]2024-10-14 09:53:18.754 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4400 => 3.7325561823231252
+training recflow-nn :  22%|██▏       | 4499/20001 [00:32<01:51, 139.45it/s]2024-10-14 09:53:19.475 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4500 => 3.742349235703232
+training recflow-nn :  23%|██▎       | 4597/20001 [00:33<01:50, 139.45it/s]2024-10-14 09:53:20.193 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4600 => 3.7225562601270954
+training recflow-nn :  23%|██▎       | 4697/20001 [00:34<01:49, 140.05it/s]2024-10-14 09:53:20.911 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4700 => 3.7268568248361627
+training recflow-nn :  24%|██▍       | 4798/20001 [00:34<01:49, 138.69it/s]2024-10-14 09:53:21.635 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4800 => 3.7154640610800267
+training recflow-nn :  24%|██▍       | 4887/20001 [00:35<01:47, 140.07it/s]2024-10-14 09:53:22.349 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 4900 => 3.6985723726075346
+training recflow-nn :  25%|██▍       | 4991/20001 [00:36<01:48, 137.82it/s]2024-10-14 09:53:23.070 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5000 => 3.752051745560339
+training recflow-nn :  25%|██▌       | 5093/20001 [00:37<01:46, 140.14it/s]2024-10-14 09:53:23.783 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5100 => 3.7489170872838873
+training recflow-nn :  26%|██▌       | 5196/20001 [00:37<01:47, 137.62it/s]2024-10-14 09:53:24.511 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5200 => 3.7195134535844097
+training recflow-nn :  26%|██▋       | 5299/20001 [00:38<01:45, 139.95it/s]2024-10-14 09:53:25.225 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5300 => 3.66732519777035
+training recflow-nn :  27%|██▋       | 5388/20001 [00:39<01:44, 140.16it/s]2024-10-14 09:53:25.941 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5400 => 3.7674368823346507
+training recflow-nn :  27%|██▋       | 5493/20001 [00:39<01:43, 139.72it/s]2024-10-14 09:53:26.658 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5500 => 3.7247704935410946
+training recflow-nn :  28%|██▊       | 5592/20001 [00:40<01:43, 138.60it/s]2024-10-14 09:53:27.380 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5600 => 3.7296969540583644
+training recflow-nn :  28%|██▊       | 5697/20001 [00:41<01:42, 140.19it/s]2024-10-14 09:53:28.094 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5700 => 3.743712873501113
+training recflow-nn :  29%|██▉       | 5786/20001 [00:42<01:41, 139.97it/s]2024-10-14 09:53:28.808 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5800 => 3.7127313470296537
+training recflow-nn :  29%|██▉       | 5891/20001 [00:42<01:40, 140.10it/s]2024-10-14 09:53:29.523 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 5900 => 3.7272719316709937
+training recflow-nn :  30%|██▉       | 5992/20001 [00:43<01:40, 139.47it/s]2024-10-14 09:53:30.241 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6000 => 3.732833779647974
+training recflow-nn :  30%|███       | 6094/20001 [00:44<01:39, 140.12it/s]2024-10-14 09:53:30.956 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6100 => 3.720340873665064
+training recflow-nn :  31%|███       | 6193/20001 [00:44<01:39, 139.00it/s]2024-10-14 09:53:31.682 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6200 => 3.7430100081349473
+training recflow-nn :  31%|███▏      | 6292/20001 [00:45<01:38, 139.63it/s]2024-10-14 09:53:32.398 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6300 => 3.6939220892108997
+training recflow-nn :  32%|███▏      | 6390/20001 [00:46<01:37, 139.17it/s]2024-10-14 09:53:33.116 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6400 => 3.691016168438717
+training recflow-nn :  32%|███▏      | 6489/20001 [00:47<01:37, 139.14it/s]2024-10-14 09:53:33.834 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6500 => 3.700134332476849
+training recflow-nn :  33%|███▎      | 6587/20001 [00:47<01:38, 136.82it/s]2024-10-14 09:53:34.563 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6600 => 3.708423741519405
+training recflow-nn :  33%|███▎      | 6699/20001 [00:48<01:36, 138.30it/s]2024-10-14 09:53:35.289 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6700 => 3.73211351079248
+training recflow-nn :  34%|███▍      | 6798/20001 [00:49<01:35, 138.71it/s]2024-10-14 09:53:36.013 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6800 => 3.7429205925593023
+training recflow-nn :  34%|███▍      | 6897/20001 [00:50<01:34, 139.35it/s]2024-10-14 09:53:36.734 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 6900 => 3.7078109261692207
+training recflow-nn :  35%|███▍      | 6995/20001 [00:50<01:33, 139.26it/s]2024-10-14 09:53:37.457 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7000 => 3.7516876766400284
+training recflow-nn :  35%|███▌      | 7094/20001 [00:51<01:33, 138.40it/s]2024-10-14 09:53:38.179 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7100 => 3.690788423941467
+training recflow-nn :  36%|███▌      | 7192/20001 [00:52<01:33, 137.36it/s]2024-10-14 09:53:38.910 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7200 => 3.729279950426884
+training recflow-nn :  36%|███▋      | 7290/20001 [00:52<01:33, 136.13it/s]2024-10-14 09:53:39.641 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7300 => 3.722488668956488
+training recflow-nn :  37%|███▋      | 7388/20001 [00:53<01:32, 136.27it/s]2024-10-14 09:53:40.381 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7400 => 3.7120177774870027
+training recflow-nn :  37%|███▋      | 7500/20001 [00:54<01:30, 138.11it/s]2024-10-14 09:53:41.114 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7500 => 3.7360454848356692
+training recflow-nn :  38%|███▊      | 7598/20001 [00:55<01:29, 138.81it/s]2024-10-14 09:53:41.836 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7600 => 3.7485706538502757
+training recflow-nn :  38%|███▊      | 7696/20001 [00:55<01:30, 136.32it/s]2024-10-14 09:53:42.568 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7700 => 3.7374309991391934
+training recflow-nn :  39%|███▉      | 7794/20001 [00:56<01:29, 136.67it/s]2024-10-14 09:53:43.298 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7800 => 3.701534900770239
+training recflow-nn :  39%|███▉      | 7892/20001 [00:57<01:28, 136.89it/s]2024-10-14 09:53:44.030 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 7900 => 3.7390057889587465
+training recflow-nn :  40%|███▉      | 7990/20001 [00:58<01:29, 134.25it/s]2024-10-14 09:53:44.769 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8000 => 3.700782940245695
+training recflow-nn :  40%|████      | 8090/20001 [00:58<01:26, 137.29it/s]2024-10-14 09:53:45.505 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8100 => 3.7026342953158315
+training recflow-nn :  41%|████      | 8190/20001 [00:59<01:24, 139.10it/s]2024-10-14 09:53:46.225 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8200 => 3.717411496348742
+training recflow-nn :  41%|████▏     | 8291/20001 [01:00<01:23, 139.82it/s]2024-10-14 09:53:46.940 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8300 => 3.7005213338290135
+training recflow-nn :  42%|████▏     | 8389/20001 [01:00<01:23, 139.34it/s]2024-10-14 09:53:47.660 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8400 => 3.6936028871232227
+training recflow-nn :  42%|████▏     | 8488/20001 [01:01<01:22, 139.71it/s]2024-10-14 09:53:48.376 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8500 => 3.727745970931962
+training recflow-nn :  43%|████▎     | 8587/20001 [01:02<01:21, 139.49it/s]2024-10-14 09:53:49.093 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8600 => 3.700882359876351
+training recflow-nn :  43%|████▎     | 8699/20001 [01:03<01:22, 137.52it/s]2024-10-14 09:53:49.824 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8700 => 3.7510634030311403
+training recflow-nn :  44%|████▍     | 8799/20001 [01:03<01:20, 139.62it/s]2024-10-14 09:53:50.539 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8800 => 3.7110247274719077
+training recflow-nn :  44%|████▍     | 8897/20001 [01:04<01:21, 136.40it/s]2024-10-14 09:53:51.268 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 8900 => 3.725013898269249
+training recflow-nn :  45%|████▍     | 8995/20001 [01:05<01:20, 137.25it/s]2024-10-14 09:53:51.998 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9000 => 3.705807508108948
+training recflow-nn :  45%|████▌     | 9093/20001 [01:06<01:19, 137.28it/s]2024-10-14 09:53:52.729 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9100 => 3.719893109716813
+training recflow-nn :  46%|████▌     | 9191/20001 [01:06<01:18, 138.46it/s]2024-10-14 09:53:53.452 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9200 => 3.7044331293244244
+training recflow-nn :  46%|████▋     | 9289/20001 [01:07<01:17, 138.61it/s]2024-10-14 09:53:54.173 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9300 => 3.722012895462841
+training recflow-nn :  47%|████▋     | 9387/20001 [01:08<01:17, 137.46it/s]2024-10-14 09:53:54.909 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9400 => 3.726696755505632
+training recflow-nn :  47%|████▋     | 9486/20001 [01:08<01:15, 138.37it/s]2024-10-14 09:53:55.630 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9500 => 3.7280594094937762
+training recflow-nn :  48%|████▊     | 9600/20001 [01:09<01:14, 139.76it/s]2024-10-14 09:53:56.346 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9600 => 3.686995008100526
+training recflow-nn :  48%|████▊     | 9700/20001 [01:10<01:13, 139.84it/s]2024-10-14 09:53:57.061 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9700 => 3.710081046628077
+training recflow-nn :  49%|████▉     | 9800/20001 [01:11<01:12, 139.84it/s]2024-10-14 09:53:57.777 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9800 => 3.705440926789415
+training recflow-nn :  49%|████▉     | 9900/20001 [01:11<01:12, 139.74it/s]2024-10-14 09:53:58.493 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 9900 => 3.7542950468475764
+training recflow-nn :  50%|████▉     | 10000/20001 [01:12<01:12, 138.88it/s]2024-10-14 09:53:59.215 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10000 => 3.742551991679832
+training recflow-nn :  50%|█████     | 10099/20001 [01:13<01:12, 136.32it/s]2024-10-14 09:53:59.950 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10100 => 3.683148351559552
+training recflow-nn :  51%|█████     | 10197/20001 [01:13<01:11, 137.41it/s]2024-10-14 09:54:00.676 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10200 => 3.7366319923046944
+training recflow-nn :  51%|█████▏    | 10295/20001 [01:14<01:12, 134.41it/s]2024-10-14 09:54:01.413 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10300 => 3.7040367203510316
+training recflow-nn :  52%|█████▏    | 10393/20001 [01:15<01:10, 136.97it/s]2024-10-14 09:54:02.138 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10400 => 3.7222337720846164
+training recflow-nn :  52%|█████▏    | 10491/20001 [01:16<01:08, 138.42it/s]2024-10-14 09:54:02.862 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10500 => 3.7249595539180196
+training recflow-nn :  53%|█████▎    | 10589/20001 [01:16<01:09, 136.23it/s]2024-10-14 09:54:03.596 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10600 => 3.7229583370774257
+training recflow-nn :  53%|█████▎    | 10687/20001 [01:17<01:07, 138.80it/s]2024-10-14 09:54:04.316 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10700 => 3.7413411538547185
+training recflow-nn :  54%|█████▍    | 10799/20001 [01:18<01:07, 136.80it/s]2024-10-14 09:54:05.051 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10800 => 3.730377727692479
+training recflow-nn :  54%|█████▍    | 10897/20001 [01:19<01:05, 138.64it/s]2024-10-14 09:54:05.773 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 10900 => 3.73849608045774
+training recflow-nn :  55%|█████▍    | 10995/20001 [01:19<01:04, 138.70it/s]2024-10-14 09:54:06.494 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11000 => 3.710249930179716
+training recflow-nn :  55%|█████▌    | 11093/20001 [01:20<01:05, 134.98it/s]2024-10-14 09:54:07.236 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11100 => 3.714772905492053
+training recflow-nn :  56%|█████▌    | 11191/20001 [01:21<01:04, 136.07it/s]2024-10-14 09:54:07.970 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11200 => 3.684972734331312
+training recflow-nn :  56%|█████▋    | 11289/20001 [01:21<01:03, 137.36it/s]2024-10-14 09:54:08.703 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11300 => 3.714113416848239
+training recflow-nn :  57%|█████▋    | 11387/20001 [01:22<01:02, 138.19it/s]2024-10-14 09:54:09.425 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11400 => 3.6864318721255582
+training recflow-nn :  57%|█████▋    | 11499/20001 [01:23<01:02, 135.89it/s]2024-10-14 09:54:10.157 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11500 => 3.6925826953569763
+training recflow-nn :  58%|█████▊    | 11597/20001 [01:24<01:00, 138.63it/s]2024-10-14 09:54:10.878 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11600 => 3.7253839108451015
+training recflow-nn :  58%|█████▊    | 11695/20001 [01:24<00:59, 138.71it/s]2024-10-14 09:54:11.600 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11700 => 3.7108376669656287
+training recflow-nn :  59%|█████▉    | 11793/20001 [01:25<00:59, 138.63it/s]2024-10-14 09:54:12.321 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11800 => 3.704705290239533
+training recflow-nn :  59%|█████▉    | 11891/20001 [01:26<00:59, 137.37it/s]2024-10-14 09:54:13.047 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 11900 => 3.7306293795505896
+training recflow-nn :  60%|█████▉    | 11989/20001 [01:27<00:58, 136.57it/s]2024-10-14 09:54:13.781 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12000 => 3.693649866345666
+training recflow-nn :  60%|██████    | 12087/20001 [01:27<00:57, 138.51it/s]2024-10-14 09:54:14.508 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12100 => 3.674093414864304
+training recflow-nn :  61%|██████    | 12199/20001 [01:28<00:56, 137.76it/s]2024-10-14 09:54:15.234 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12200 => 3.702375577563667
+training recflow-nn :  61%|██████▏   | 12297/20001 [01:29<00:55, 138.68it/s]2024-10-14 09:54:15.956 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12300 => 3.7285085443469925
+training recflow-nn :  62%|██████▏   | 12396/20001 [01:29<00:54, 139.27it/s]2024-10-14 09:54:16.676 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12400 => 3.716383578940525
+training recflow-nn :  62%|██████▏   | 12494/20001 [01:30<00:53, 139.40it/s]2024-10-14 09:54:17.394 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12500 => 3.6826333132889593
+training recflow-nn :  63%|██████▎   | 12592/20001 [01:31<00:53, 139.50it/s]2024-10-14 09:54:18.111 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12600 => 3.729640068306728
+training recflow-nn :  63%|██████▎   | 12690/20001 [01:32<00:52, 139.54it/s]2024-10-14 09:54:18.829 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12700 => 3.7055981921274284
+training recflow-nn :  64%|██████▍   | 12788/20001 [01:32<00:52, 136.52it/s]2024-10-14 09:54:19.557 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12800 => 3.709972699559808
+training recflow-nn :  64%|██████▍   | 12900/20001 [01:33<00:51, 138.18it/s]2024-10-14 09:54:20.281 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 12900 => 3.6638585493943916
+training recflow-nn :  65%|██████▍   | 12998/20001 [01:34<00:50, 139.56it/s]2024-10-14 09:54:20.997 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13000 => 3.7222290642536056
+training recflow-nn :  65%|██████▌   | 13096/20001 [01:35<00:49, 139.28it/s]2024-10-14 09:54:21.716 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13100 => 3.670140448791274
+training recflow-nn :  66%|██████▌   | 13194/20001 [01:35<00:49, 138.80it/s]2024-10-14 09:54:22.436 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13200 => 3.6915245412799713
+training recflow-nn :  66%|██████▋   | 13292/20001 [01:36<00:48, 139.08it/s]2024-10-14 09:54:23.156 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13300 => 3.719072206327502
+training recflow-nn :  67%|██████▋   | 13390/20001 [01:37<00:47, 139.28it/s]2024-10-14 09:54:23.874 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13400 => 3.71805355524821
+training recflow-nn :  67%|██████▋   | 13488/20001 [01:37<00:46, 139.60it/s]2024-10-14 09:54:24.591 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13500 => 3.691356910513039
+training recflow-nn :  68%|██████▊   | 13591/20001 [01:38<00:45, 139.97it/s]2024-10-14 09:54:25.305 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13600 => 3.7030573550430717
+training recflow-nn :  68%|██████▊   | 13694/20001 [01:39<00:45, 140.05it/s]2024-10-14 09:54:26.020 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13700 => 3.7366659109613667
+training recflow-nn :  69%|██████▉   | 13798/20001 [01:40<00:44, 140.03it/s]2024-10-14 09:54:26.734 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13800 => 3.702738160595761
+training recflow-nn :  69%|██████▉   | 13897/20001 [01:40<00:43, 139.77it/s]2024-10-14 09:54:27.450 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 13900 => 3.7197286879935083
+training recflow-nn :  70%|██████▉   | 13995/20001 [01:41<00:43, 139.63it/s]2024-10-14 09:54:28.167 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14000 => 3.686166813569547
+training recflow-nn :  70%|███████   | 14094/20001 [01:42<00:42, 139.87it/s]2024-10-14 09:54:28.883 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14100 => 3.735581521608581
+training recflow-nn :  71%|███████   | 14192/20001 [01:42<00:42, 136.26it/s]2024-10-14 09:54:29.624 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14200 => 3.705779139502574
+training recflow-nn :  71%|███████▏  | 14290/20001 [01:43<00:41, 138.78it/s]2024-10-14 09:54:30.342 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14300 => 3.688575894588104
+training recflow-nn :  72%|███████▏  | 14388/20001 [01:44<00:40, 139.01it/s]2024-10-14 09:54:31.063 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14400 => 3.708093500636196
+training recflow-nn :  72%|███████▏  | 14500/20001 [01:45<00:39, 137.75it/s]2024-10-14 09:54:31.794 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14500 => 3.7345634849624503
+training recflow-nn :  73%|███████▎  | 14598/20001 [01:45<00:38, 139.11it/s]2024-10-14 09:54:32.512 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14600 => 3.6820366923716286
+training recflow-nn :  73%|███████▎  | 14696/20001 [01:46<00:38, 139.00it/s]2024-10-14 09:54:33.232 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14700 => 3.681445781765893
+training recflow-nn :  74%|███████▍  | 14794/20001 [01:47<00:37, 138.98it/s]2024-10-14 09:54:33.955 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14800 => 3.7081242501772245
+training recflow-nn :  74%|███████▍  | 14892/20001 [01:47<00:37, 135.01it/s]2024-10-14 09:54:34.685 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 14900 => 3.726531261798663
+training recflow-nn :  75%|███████▍  | 14991/20001 [01:48<00:36, 139.04it/s]2024-10-14 09:54:35.403 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15000 => 3.7208224699242405
+training recflow-nn :  75%|███████▌  | 15089/20001 [01:49<00:35, 139.49it/s]2024-10-14 09:54:36.120 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15100 => 3.697221411501843
+training recflow-nn :  76%|███████▌  | 15187/20001 [01:50<00:34, 139.48it/s]2024-10-14 09:54:36.841 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15200 => 3.7018078064550415
+training recflow-nn :  76%|███████▋  | 15299/20001 [01:50<00:34, 138.16it/s]2024-10-14 09:54:37.570 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15300 => 3.701882019161004
+training recflow-nn :  77%|███████▋  | 15397/20001 [01:51<00:33, 136.67it/s]2024-10-14 09:54:38.304 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15400 => 3.7011659041648755
+training recflow-nn :  77%|███████▋  | 15496/20001 [01:52<00:32, 138.33it/s]2024-10-14 09:54:39.031 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15500 => 3.7109712522386635
+training recflow-nn :  78%|███████▊  | 15595/20001 [01:53<00:32, 136.08it/s]2024-10-14 09:54:39.762 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15600 => 3.7241066533261624
+training recflow-nn :  78%|███████▊  | 15692/20001 [01:53<00:33, 129.17it/s]2024-10-14 09:54:40.537 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15700 => 3.7174064010556513
+training recflow-nn :  79%|███████▉  | 15796/20001 [01:54<00:32, 128.40it/s]2024-10-14 09:54:41.317 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15800 => 3.7079199149657036
+training recflow-nn :  79%|███████▉  | 15900/20001 [01:55<00:31, 128.39it/s]2024-10-14 09:54:42.096 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 15900 => 3.6973873830670105
+training recflow-nn :  80%|███████▉  | 15991/20001 [01:56<00:31, 127.41it/s]2024-10-14 09:54:42.888 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16000 => 3.7087515559202124
+training recflow-nn :  80%|████████  | 16100/20001 [01:56<00:28, 135.73it/s]2024-10-14 09:54:43.638 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16100 => 3.702299236919311
+training recflow-nn :  81%|████████  | 16198/20001 [01:57<00:27, 137.74it/s]2024-10-14 09:54:44.364 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16200 => 3.679313754649824
+training recflow-nn :  81%|████████▏ | 16296/20001 [01:58<00:27, 136.51it/s]2024-10-14 09:54:45.101 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16300 => 3.7029721300775416
+training recflow-nn :  82%|████████▏ | 16394/20001 [01:59<00:27, 131.48it/s]2024-10-14 09:54:45.849 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16400 => 3.693403130442359
+training recflow-nn :  82%|████████▏ | 16499/20001 [01:59<00:27, 128.27it/s]2024-10-14 09:54:46.633 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16500 => 3.6479811026030453
+training recflow-nn :  83%|████████▎ | 16590/20001 [02:00<00:26, 126.87it/s]2024-10-14 09:54:47.420 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16600 => 3.6908988546795056
+training recflow-nn :  83%|████████▎ | 16694/20001 [02:01<00:26, 127.00it/s]2024-10-14 09:54:48.213 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16700 => 3.7423402118934552
+training recflow-nn :  84%|████████▍ | 16798/20001 [02:02<00:24, 128.24it/s]2024-10-14 09:54:48.994 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16800 => 3.7005630945079
+training recflow-nn :  84%|████████▍ | 16889/20001 [02:03<00:24, 128.50it/s]2024-10-14 09:54:49.771 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 16900 => 3.708158483308436
+training recflow-nn :  85%|████████▍ | 16993/20001 [02:03<00:23, 128.70it/s]2024-10-14 09:54:50.548 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17000 => 3.689742584968112
+training recflow-nn :  85%|████████▌ | 17097/20001 [02:04<00:22, 127.16it/s]2024-10-14 09:54:51.333 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17100 => 3.7040953946309
+training recflow-nn :  86%|████████▌ | 17188/20001 [02:05<00:21, 127.96it/s]2024-10-14 09:54:52.115 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17200 => 3.725365177427604
+training recflow-nn :  86%|████████▋ | 17292/20001 [02:06<00:21, 127.44it/s]2024-10-14 09:54:52.897 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17300 => 3.7052097103520794
+training recflow-nn :  87%|████████▋ | 17396/20001 [02:06<00:20, 128.15it/s]2024-10-14 09:54:53.679 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17400 => 3.684216340470936
+training recflow-nn :  87%|████████▋ | 17488/20001 [02:07<00:19, 131.16it/s]2024-10-14 09:54:54.444 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17500 => 3.673136141550787
+training recflow-nn :  88%|████████▊ | 17600/20001 [02:08<00:18, 129.42it/s]2024-10-14 09:54:55.202 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17600 => 3.6947505612258795
+training recflow-nn :  88%|████████▊ | 17691/20001 [02:09<00:18, 126.33it/s]2024-10-14 09:54:55.995 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17700 => 3.713802673192505
+training recflow-nn :  89%|████████▉ | 17795/20001 [02:10<00:17, 125.29it/s]2024-10-14 09:54:56.791 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17800 => 3.705234436567906
+training recflow-nn :  89%|████████▉ | 17899/20001 [02:10<00:16, 126.98it/s]2024-10-14 09:54:57.582 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 17900 => 3.6998707798166635
+training recflow-nn :  90%|████████▉ | 17990/20001 [02:11<00:15, 127.35it/s]2024-10-14 09:54:58.367 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18000 => 3.7251220673484275
+training recflow-nn :  90%|█████████ | 18094/20001 [02:12<00:15, 126.35it/s]2024-10-14 09:54:59.159 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18100 => 3.7121714653759614
+training recflow-nn :  91%|█████████ | 18198/20001 [02:13<00:14, 127.02it/s]2024-10-14 09:54:59.948 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18200 => 3.7266371470766133
+training recflow-nn :  91%|█████████▏| 18289/20001 [02:13<00:13, 127.00it/s]2024-10-14 09:55:00.737 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18300 => 3.7074399259718467
+training recflow-nn :  92%|█████████▏| 18393/20001 [02:14<00:12, 126.28it/s]2024-10-14 09:55:01.529 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18400 => 3.691854050217702
+training recflow-nn :  92%|█████████▏| 18497/20001 [02:15<00:11, 126.90it/s]2024-10-14 09:55:02.318 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18500 => 3.696944907712866
+training recflow-nn :  93%|█████████▎| 18588/20001 [02:16<00:11, 126.97it/s]2024-10-14 09:55:03.106 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18600 => 3.7206818512492448
+training recflow-nn :  93%|█████████▎| 18692/20001 [02:17<00:10, 126.61it/s]2024-10-14 09:55:03.898 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18700 => 3.705238275482363
+training recflow-nn :  94%|█████████▍| 18796/20001 [02:17<00:09, 126.09it/s]2024-10-14 09:55:04.692 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18800 => 3.6990643946067387
+training recflow-nn :  94%|█████████▍| 18900/20001 [02:18<00:08, 126.62it/s]2024-10-14 09:55:05.487 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 18900 => 3.709734721616595
+training recflow-nn :  95%|█████████▍| 18991/20001 [02:19<00:08, 124.56it/s]2024-10-14 09:55:06.293 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19000 => 3.6924716864674045
+training recflow-nn :  95%|█████████▌| 19095/20001 [02:20<00:07, 123.76it/s]2024-10-14 09:55:07.097 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19100 => 3.7259604377335336
+training recflow-nn :  96%|█████████▌| 19199/20001 [02:21<00:06, 124.02it/s]2024-10-14 09:55:07.904 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19200 => 3.7338913472957778
+training recflow-nn :  96%|█████████▋| 19290/20001 [02:21<00:05, 125.52it/s]2024-10-14 09:55:08.710 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19300 => 3.7025230379612935
+training recflow-nn :  97%|█████████▋| 19394/20001 [02:22<00:04, 126.46it/s]2024-10-14 09:55:09.500 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19400 => 3.688515886244581
+training recflow-nn :  97%|█████████▋| 19498/20001 [02:23<00:04, 125.58it/s]2024-10-14 09:55:10.306 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19500 => 3.686886337654999
+training recflow-nn :  98%|█████████▊| 19589/20001 [02:24<00:03, 125.84it/s]2024-10-14 09:55:11.104 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19600 => 3.691910603523283
+training recflow-nn :  98%|█████████▊| 19693/20001 [02:25<00:02, 126.31it/s]2024-10-14 09:55:11.897 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19700 => 3.7346187324737885
+training recflow-nn :  99%|█████████▉| 19797/20001 [02:26<00:01, 126.41it/s]2024-10-14 09:55:12.691 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19800 => 3.7375576352068087
+training recflow-nn :  99%|█████████▉| 19888/20001 [02:26<00:00, 126.25it/s]2024-10-14 09:55:13.483 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 19900 => 3.661238372796829
+training recflow-nn : 100%|█████████▉| 19992/20001 [02:27<00:00, 125.76it/s]2024-10-14 09:55:14.279 | INFO     | flow_matching.training:train_rectified_flow_nn:47 - si for loss type <class 'torch.nn.modules.loss.MSELoss'> @i = 20000 => 3.678905991225432
+training recflow-nn : 100%|██████████| 20001/20001 [02:27<00:00, 135.49it/s]
+2024-10-14 09:55:14.284 | INFO     | __main__:<module>:191 - Training time for NN-Recflow with dtype <class 'torch.cuda.DoubleTensor'> = 147 seconds
+2024-10-14 09:56:05.565 | INFO     | __main__:<module>:196 - Inference time for NN-RecFlow with dtype <class 'torch.cuda.DoubleTensor'> = 51 seconds
+2024-10-14 09:56:05.566 | INFO     | __main__:<module>:199 - Training and inference for NN-RecFlow has finished successfully
+2024-10-14 09:56:05.566 | INFO     | __main__:<module>:202 - Computing the linear transformation of X1
+2024-10-14 09:56:05.624 | INFO     | __main__:<module>:216 - Plotting the transformed samples
+2024-10-14 09:56:09.686 | INFO     | __main__:<module>:245 - Running with bases rbf with kwargs : {'length_scales': [0.3, 0.3, 0.3], 'n_centres': 25}
+2024-10-14 09:56:09.687 | INFO     | __main__:<module>:275 - Getting TT-RecFlow model based on fixed params
+2024-10-14 09:56:09.704 | INFO     | flow_matching.training:train_tt_recflow:131 - Basis dimensions: [25, 25, 25]
+2024-10-14 09:56:09.705 | INFO     | flow_matching.training:train_tt_recflow:132 - Initial ranks: [1, 8, 8, 1]
+2024-10-14 09:56:09.705 | INFO     | flow_matching.training:train_tt_recflow:134 - Initial L2 regularisation: 1.00e-03
+2024-10-14 09:56:09.705 | INFO     | flow_matching.training:train_tt_recflow:138 - Max iterations: 200
+2024-10-14 09:56:09.705 | INFO     | flow_matching.training:train_tt_recflow:139 - Tolerance: 5.00e-10
+2024-10-14 09:56:09.705 | INFO     | flow_matching.training:train_tt_recflow:140 - Rank adaptivity: None
+2024-10-14 09:56:09.705 | INFO     | flow_matching.training:train_tt_recflow:142 - Learning the vector field
+2024-10-14 09:56:14.917 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=1, Stagnation=1.248e+00, Relative L2=6.933e-01
+2024-10-14 09:56:20.009 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=2, Stagnation=8.230e-01, Relative L2=6.827e-01
+2024-10-14 09:56:25.101 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=3, Stagnation=6.274e-01, Relative L2=6.811e-01
+2024-10-14 09:56:30.192 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=4, Stagnation=2.646e-01, Relative L2=6.808e-01
+2024-10-14 09:56:35.284 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=5, Stagnation=1.507e-01, Relative L2=6.806e-01
+2024-10-14 09:56:40.376 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=6, Stagnation=1.190e-01, Relative L2=6.805e-01
+2024-10-14 09:56:45.469 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=7, Stagnation=1.067e-01, Relative L2=6.803e-01
+2024-10-14 09:56:50.562 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=8, Stagnation=1.021e-01, Relative L2=6.802e-01
+2024-10-14 09:56:55.655 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=9, Stagnation=1.013e-01, Relative L2=6.801e-01
+2024-10-14 09:57:00.748 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=10, Stagnation=1.015e-01, Relative L2=6.800e-01
+2024-10-14 09:57:05.840 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=11, Stagnation=9.590e-02, Relative L2=6.799e-01
+2024-10-14 09:57:10.933 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=12, Stagnation=8.623e-02, Relative L2=6.799e-01
+2024-10-14 09:57:16.066 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=13, Stagnation=7.986e-02, Relative L2=6.798e-01
+2024-10-14 09:57:21.347 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=14, Stagnation=7.660e-02, Relative L2=6.797e-01
+2024-10-14 09:57:26.554 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=15, Stagnation=7.414e-02, Relative L2=6.797e-01
+2024-10-14 09:57:31.747 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=16, Stagnation=7.212e-02, Relative L2=6.796e-01
+2024-10-14 09:57:36.945 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=17, Stagnation=7.095e-02, Relative L2=6.795e-01
+2024-10-14 09:57:42.316 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=18, Stagnation=7.053e-02, Relative L2=6.795e-01
+2024-10-14 09:57:47.761 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=19, Stagnation=7.045e-02, Relative L2=6.794e-01
+2024-10-14 09:57:53.141 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=20, Stagnation=7.036e-02, Relative L2=6.793e-01
+2024-10-14 09:57:58.437 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=21, Stagnation=7.010e-02, Relative L2=6.793e-01
+2024-10-14 09:58:03.730 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=22, Stagnation=6.967e-02, Relative L2=6.792e-01
+2024-10-14 09:58:09.023 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=23, Stagnation=6.920e-02, Relative L2=6.791e-01
+2024-10-14 09:58:14.323 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=24, Stagnation=6.857e-02, Relative L2=6.791e-01
+2024-10-14 09:58:19.623 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=25, Stagnation=6.761e-02, Relative L2=6.790e-01
+2024-10-14 09:58:24.919 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=26, Stagnation=6.632e-02, Relative L2=6.789e-01
+2024-10-14 09:58:30.219 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=27, Stagnation=6.493e-02, Relative L2=6.789e-01
+2024-10-14 09:58:35.652 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=28, Stagnation=6.372e-02, Relative L2=6.788e-01
+2024-10-14 09:58:40.990 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=29, Stagnation=6.286e-02, Relative L2=6.788e-01
+2024-10-14 09:58:46.331 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=30, Stagnation=6.234e-02, Relative L2=6.787e-01
+2024-10-14 09:58:51.674 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=31, Stagnation=6.206e-02, Relative L2=6.786e-01
+2024-10-14 09:58:57.021 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=32, Stagnation=6.195e-02, Relative L2=6.786e-01
+2024-10-14 09:59:02.365 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=33, Stagnation=6.194e-02, Relative L2=6.785e-01
+2024-10-14 09:59:07.703 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=34, Stagnation=6.199e-02, Relative L2=6.785e-01
+2024-10-14 09:59:13.051 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=35, Stagnation=6.208e-02, Relative L2=6.784e-01
+2024-10-14 09:59:18.390 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=36, Stagnation=6.220e-02, Relative L2=6.784e-01
+2024-10-14 09:59:23.732 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=37, Stagnation=6.234e-02, Relative L2=6.783e-01
+2024-10-14 09:59:29.079 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=38, Stagnation=6.248e-02, Relative L2=6.783e-01
+2024-10-14 09:59:34.428 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=39, Stagnation=6.261e-02, Relative L2=6.782e-01
+2024-10-14 09:59:39.850 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=40, Stagnation=6.272e-02, Relative L2=6.782e-01
+2024-10-14 09:59:45.236 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=41, Stagnation=6.280e-02, Relative L2=6.781e-01
+2024-10-14 09:59:50.619 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=42, Stagnation=6.283e-02, Relative L2=6.780e-01
+2024-10-14 09:59:55.948 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=43, Stagnation=6.281e-02, Relative L2=6.780e-01
+2024-10-14 10:00:01.224 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=44, Stagnation=6.273e-02, Relative L2=6.779e-01
+2024-10-14 10:00:06.467 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=45, Stagnation=6.259e-02, Relative L2=6.779e-01
+2024-10-14 10:00:11.707 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=46, Stagnation=6.241e-02, Relative L2=6.778e-01
+2024-10-14 10:00:16.916 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=47, Stagnation=6.219e-02, Relative L2=6.778e-01
+2024-10-14 10:00:22.182 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=48, Stagnation=6.194e-02, Relative L2=6.777e-01
+2024-10-14 10:00:27.456 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=49, Stagnation=6.168e-02, Relative L2=6.777e-01
+2024-10-14 10:00:32.660 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=50, Stagnation=6.143e-02, Relative L2=6.776e-01
+2024-10-14 10:00:37.863 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=51, Stagnation=6.120e-02, Relative L2=6.776e-01
+2024-10-14 10:00:43.070 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=52, Stagnation=6.100e-02, Relative L2=6.775e-01
+2024-10-14 10:00:48.333 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=53, Stagnation=6.086e-02, Relative L2=6.775e-01
+2024-10-14 10:00:53.554 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=54, Stagnation=6.077e-02, Relative L2=6.774e-01
+2024-10-14 10:00:58.872 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=55, Stagnation=6.070e-02, Relative L2=6.774e-01
+2024-10-14 10:01:04.227 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=56, Stagnation=6.057e-02, Relative L2=6.773e-01
+2024-10-14 10:01:09.466 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=57, Stagnation=6.032e-02, Relative L2=6.773e-01
+2024-10-14 10:01:14.804 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=58, Stagnation=5.991e-02, Relative L2=6.772e-01
+2024-10-14 10:01:20.141 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=59, Stagnation=5.939e-02, Relative L2=6.772e-01
+2024-10-14 10:01:25.344 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=60, Stagnation=5.883e-02, Relative L2=6.772e-01
+2024-10-14 10:01:30.592 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=61, Stagnation=5.835e-02, Relative L2=6.771e-01
+2024-10-14 10:01:35.868 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=62, Stagnation=5.798e-02, Relative L2=6.771e-01
+2024-10-14 10:01:41.041 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=63, Stagnation=5.772e-02, Relative L2=6.770e-01
+2024-10-14 10:01:46.341 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=64, Stagnation=5.755e-02, Relative L2=6.770e-01
+2024-10-14 10:01:51.625 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=65, Stagnation=5.744e-02, Relative L2=6.769e-01
+2024-10-14 10:01:56.890 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=66, Stagnation=5.737e-02, Relative L2=6.769e-01
+2024-10-14 10:02:02.120 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=67, Stagnation=5.734e-02, Relative L2=6.768e-01
+2024-10-14 10:02:07.345 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=68, Stagnation=5.735e-02, Relative L2=6.768e-01
+2024-10-14 10:02:12.569 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=69, Stagnation=5.738e-02, Relative L2=6.768e-01
+2024-10-14 10:02:17.895 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=70, Stagnation=5.744e-02, Relative L2=6.767e-01
+2024-10-14 10:02:23.153 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=71, Stagnation=5.752e-02, Relative L2=6.767e-01
+2024-10-14 10:02:28.412 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=72, Stagnation=5.758e-02, Relative L2=6.766e-01
+2024-10-14 10:02:33.672 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=73, Stagnation=5.759e-02, Relative L2=6.766e-01
+2024-10-14 10:02:38.931 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=74, Stagnation=5.750e-02, Relative L2=6.766e-01
+2024-10-14 10:02:44.191 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=75, Stagnation=5.726e-02, Relative L2=6.765e-01
+2024-10-14 10:02:49.451 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=76, Stagnation=5.684e-02, Relative L2=6.765e-01
+2024-10-14 10:02:54.766 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=77, Stagnation=5.628e-02, Relative L2=6.765e-01
+2024-10-14 10:03:00.144 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=78, Stagnation=5.569e-02, Relative L2=6.764e-01
+2024-10-14 10:03:05.549 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=79, Stagnation=5.516e-02, Relative L2=6.764e-01
+2024-10-14 10:03:10.920 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=80, Stagnation=5.479e-02, Relative L2=6.763e-01
+2024-10-14 10:03:16.582 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=81, Stagnation=5.459e-02, Relative L2=6.763e-01
+2024-10-14 10:03:22.062 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=82, Stagnation=5.453e-02, Relative L2=6.763e-01
+2024-10-14 10:03:27.354 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=83, Stagnation=5.459e-02, Relative L2=6.763e-01
+2024-10-14 10:03:32.784 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=84, Stagnation=5.474e-02, Relative L2=6.762e-01
+2024-10-14 10:03:38.169 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=85, Stagnation=5.494e-02, Relative L2=6.762e-01
+2024-10-14 10:03:43.504 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=86, Stagnation=5.519e-02, Relative L2=6.762e-01
+2024-10-14 10:03:48.943 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=87, Stagnation=5.546e-02, Relative L2=6.761e-01
+2024-10-14 10:03:54.789 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=88, Stagnation=5.576e-02, Relative L2=6.761e-01
+2024-10-14 10:04:00.535 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=89, Stagnation=5.609e-02, Relative L2=6.761e-01
+2024-10-14 10:04:06.461 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=90, Stagnation=5.645e-02, Relative L2=6.761e-01
+2024-10-14 10:04:12.289 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=91, Stagnation=5.684e-02, Relative L2=6.760e-01
+2024-10-14 10:04:18.296 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=92, Stagnation=5.726e-02, Relative L2=6.760e-01
+2024-10-14 10:04:24.217 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=93, Stagnation=5.772e-02, Relative L2=6.760e-01
+2024-10-14 10:04:29.817 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=94, Stagnation=5.821e-02, Relative L2=6.760e-01
+2024-10-14 10:04:35.402 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=95, Stagnation=5.871e-02, Relative L2=6.759e-01
+2024-10-14 10:04:40.983 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=96, Stagnation=5.913e-02, Relative L2=6.759e-01
+2024-10-14 10:04:46.568 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=97, Stagnation=5.938e-02, Relative L2=6.759e-01
+2024-10-14 10:04:52.160 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=98, Stagnation=5.940e-02, Relative L2=6.758e-01
+2024-10-14 10:04:57.745 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=99, Stagnation=5.925e-02, Relative L2=6.758e-01
+2024-10-14 10:05:03.320 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=100, Stagnation=5.907e-02, Relative L2=6.758e-01
+2024-10-14 10:05:08.902 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=101, Stagnation=5.893e-02, Relative L2=6.758e-01
+2024-10-14 10:05:14.532 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=102, Stagnation=5.887e-02, Relative L2=6.757e-01
+2024-10-14 10:05:19.956 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=103, Stagnation=5.891e-02, Relative L2=6.757e-01
+2024-10-14 10:05:25.606 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=104, Stagnation=5.903e-02, Relative L2=6.757e-01
+2024-10-14 10:05:31.029 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=105, Stagnation=5.917e-02, Relative L2=6.757e-01
+2024-10-14 10:05:36.553 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=106, Stagnation=5.927e-02, Relative L2=6.756e-01
+2024-10-14 10:05:42.074 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=107, Stagnation=5.934e-02, Relative L2=6.756e-01
+2024-10-14 10:05:47.597 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=108, Stagnation=5.944e-02, Relative L2=6.756e-01
+2024-10-14 10:05:53.273 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=109, Stagnation=5.961e-02, Relative L2=6.756e-01
+2024-10-14 10:05:58.989 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=110, Stagnation=5.985e-02, Relative L2=6.755e-01
+2024-10-14 10:06:05.174 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=111, Stagnation=6.015e-02, Relative L2=6.755e-01
+2024-10-14 10:06:11.020 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=112, Stagnation=6.048e-02, Relative L2=6.755e-01
+2024-10-14 10:06:16.988 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=113, Stagnation=6.082e-02, Relative L2=6.755e-01
+2024-10-14 10:06:22.949 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=114, Stagnation=6.114e-02, Relative L2=6.754e-01
+2024-10-14 10:06:28.898 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=115, Stagnation=6.143e-02, Relative L2=6.754e-01
+2024-10-14 10:06:34.669 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=116, Stagnation=6.172e-02, Relative L2=6.754e-01
+2024-10-14 10:06:40.692 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=117, Stagnation=6.204e-02, Relative L2=6.754e-01
+2024-10-14 10:06:46.725 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=118, Stagnation=6.213e-02, Relative L2=6.754e-01
+2024-10-14 10:06:52.750 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=119, Stagnation=6.147e-02, Relative L2=6.753e-01
+2024-10-14 10:06:58.779 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=120, Stagnation=6.027e-02, Relative L2=6.753e-01
+2024-10-14 10:07:04.783 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=121, Stagnation=5.921e-02, Relative L2=6.753e-01
+2024-10-14 10:07:10.652 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=122, Stagnation=5.843e-02, Relative L2=6.753e-01
+2024-10-14 10:07:16.511 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=123, Stagnation=5.783e-02, Relative L2=6.753e-01
+2024-10-14 10:07:22.153 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=124, Stagnation=5.734e-02, Relative L2=6.752e-01
+2024-10-14 10:07:27.860 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=125, Stagnation=5.692e-02, Relative L2=6.752e-01
+2024-10-14 10:07:33.559 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=126, Stagnation=5.657e-02, Relative L2=6.752e-01
+2024-10-14 10:07:39.265 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=127, Stagnation=5.630e-02, Relative L2=6.752e-01
+2024-10-14 10:07:44.972 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=128, Stagnation=5.611e-02, Relative L2=6.752e-01
+2024-10-14 10:07:50.675 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=129, Stagnation=5.601e-02, Relative L2=6.751e-01
+2024-10-14 10:07:56.378 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=130, Stagnation=5.601e-02, Relative L2=6.751e-01
+2024-10-14 10:08:02.085 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=131, Stagnation=5.614e-02, Relative L2=6.751e-01
+2024-10-14 10:08:07.787 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=132, Stagnation=5.640e-02, Relative L2=6.751e-01
+2024-10-14 10:08:13.490 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=133, Stagnation=5.668e-02, Relative L2=6.751e-01
+2024-10-14 10:08:19.201 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=134, Stagnation=5.671e-02, Relative L2=6.751e-01
+2024-10-14 10:08:24.901 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=135, Stagnation=5.642e-02, Relative L2=6.750e-01
+2024-10-14 10:08:30.575 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=136, Stagnation=5.626e-02, Relative L2=6.750e-01
+2024-10-14 10:08:36.299 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=137, Stagnation=5.614e-02, Relative L2=6.750e-01
+2024-10-14 10:08:42.016 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=138, Stagnation=5.585e-02, Relative L2=6.750e-01
+2024-10-14 10:08:47.752 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=139, Stagnation=5.552e-02, Relative L2=6.750e-01
+2024-10-14 10:08:53.491 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=140, Stagnation=5.517e-02, Relative L2=6.750e-01
+2024-10-14 10:08:59.234 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=141, Stagnation=5.480e-02, Relative L2=6.750e-01
+2024-10-14 10:09:04.978 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=142, Stagnation=5.443e-02, Relative L2=6.749e-01
+2024-10-14 10:09:10.715 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=143, Stagnation=5.413e-02, Relative L2=6.749e-01
+2024-10-14 10:09:16.439 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=144, Stagnation=5.391e-02, Relative L2=6.749e-01
+2024-10-14 10:09:22.159 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=145, Stagnation=5.378e-02, Relative L2=6.749e-01
+2024-10-14 10:09:27.714 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=146, Stagnation=5.370e-02, Relative L2=6.749e-01
+2024-10-14 10:09:33.176 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=147, Stagnation=5.368e-02, Relative L2=6.749e-01
+2024-10-14 10:09:38.683 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=148, Stagnation=5.369e-02, Relative L2=6.749e-01
+2024-10-14 10:09:44.060 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=149, Stagnation=5.370e-02, Relative L2=6.749e-01
+2024-10-14 10:09:49.651 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=150, Stagnation=5.375e-02, Relative L2=6.748e-01
+2024-10-14 10:09:55.767 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=151, Stagnation=5.381e-02, Relative L2=6.748e-01
+2024-10-14 10:10:01.775 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=152, Stagnation=5.387e-02, Relative L2=6.748e-01
+2024-10-14 10:10:07.502 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=153, Stagnation=5.392e-02, Relative L2=6.748e-01
+2024-10-14 10:10:13.537 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=154, Stagnation=5.401e-02, Relative L2=6.748e-01
+2024-10-14 10:10:19.309 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=155, Stagnation=5.410e-02, Relative L2=6.748e-01
+2024-10-14 10:10:24.936 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=156, Stagnation=5.419e-02, Relative L2=6.748e-01
+2024-10-14 10:10:30.404 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=157, Stagnation=5.430e-02, Relative L2=6.748e-01
+2024-10-14 10:10:35.909 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=158, Stagnation=5.441e-02, Relative L2=6.748e-01
+2024-10-14 10:10:41.448 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=159, Stagnation=5.453e-02, Relative L2=6.747e-01
+2024-10-14 10:10:46.986 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=160, Stagnation=5.462e-02, Relative L2=6.747e-01
+2024-10-14 10:10:52.525 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=161, Stagnation=5.475e-02, Relative L2=6.747e-01
+2024-10-14 10:10:58.064 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=162, Stagnation=5.483e-02, Relative L2=6.747e-01
+2024-10-14 10:11:03.601 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=163, Stagnation=5.492e-02, Relative L2=6.747e-01
+2024-10-14 10:11:09.138 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=164, Stagnation=5.499e-02, Relative L2=6.747e-01
+2024-10-14 10:11:14.678 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=165, Stagnation=5.509e-02, Relative L2=6.747e-01
+2024-10-14 10:11:20.216 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=166, Stagnation=5.512e-02, Relative L2=6.747e-01
+2024-10-14 10:11:26.117 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=167, Stagnation=5.516e-02, Relative L2=6.747e-01
+2024-10-14 10:11:31.891 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=168, Stagnation=5.517e-02, Relative L2=6.747e-01
+2024-10-14 10:11:37.728 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=169, Stagnation=5.519e-02, Relative L2=6.746e-01
+2024-10-14 10:11:43.536 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=170, Stagnation=5.525e-02, Relative L2=6.746e-01
+2024-10-14 10:11:49.487 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=171, Stagnation=5.523e-02, Relative L2=6.746e-01
+2024-10-14 10:11:55.191 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=172, Stagnation=5.523e-02, Relative L2=6.746e-01
+2024-10-14 10:12:00.898 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=173, Stagnation=5.531e-02, Relative L2=6.746e-01
+2024-10-14 10:12:06.599 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=174, Stagnation=5.535e-02, Relative L2=6.746e-01
+2024-10-14 10:12:12.305 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=175, Stagnation=5.537e-02, Relative L2=6.746e-01
+2024-10-14 10:12:18.008 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=176, Stagnation=5.548e-02, Relative L2=6.746e-01
+2024-10-14 10:12:23.713 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=177, Stagnation=5.566e-02, Relative L2=6.746e-01
+2024-10-14 10:12:29.419 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=178, Stagnation=5.592e-02, Relative L2=6.746e-01
+2024-10-14 10:12:34.892 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=179, Stagnation=5.604e-02, Relative L2=6.745e-01
+2024-10-14 10:12:40.411 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=180, Stagnation=5.648e-02, Relative L2=6.745e-01
+2024-10-14 10:12:46.142 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=181, Stagnation=5.678e-02, Relative L2=6.745e-01
+2024-10-14 10:12:53.673 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=182, Stagnation=5.711e-02, Relative L2=6.745e-01
+2024-10-14 10:13:01.187 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=183, Stagnation=5.760e-02, Relative L2=6.745e-01
+2024-10-14 10:13:08.696 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=184, Stagnation=5.853e-02, Relative L2=6.745e-01
+2024-10-14 10:13:16.205 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=185, Stagnation=5.919e-02, Relative L2=6.745e-01
+2024-10-14 10:13:23.715 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=186, Stagnation=5.990e-02, Relative L2=6.745e-01
+2024-10-14 10:13:31.226 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=187, Stagnation=6.113e-02, Relative L2=6.745e-01
+2024-10-14 10:13:38.741 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=188, Stagnation=6.225e-02, Relative L2=6.745e-01
+2024-10-14 10:13:46.254 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=189, Stagnation=6.287e-02, Relative L2=6.744e-01
+2024-10-14 10:13:53.767 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=190, Stagnation=6.379e-02, Relative L2=6.744e-01
+2024-10-14 10:14:01.286 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=191, Stagnation=6.533e-02, Relative L2=6.744e-01
+2024-10-14 10:14:08.805 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=192, Stagnation=6.673e-02, Relative L2=6.744e-01
+2024-10-14 10:14:16.315 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=193, Stagnation=6.978e-02, Relative L2=6.744e-01
+2024-10-14 10:14:22.335 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=194, Stagnation=7.120e-02, Relative L2=6.744e-01
+2024-10-14 10:14:28.290 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=195, Stagnation=7.471e-02, Relative L2=6.744e-01
+2024-10-14 10:14:34.255 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=196, Stagnation=7.721e-02, Relative L2=6.744e-01
+2024-10-14 10:14:40.214 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=197, Stagnation=7.841e-02, Relative L2=6.743e-01
+2024-10-14 10:14:46.174 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=198, Stagnation=8.267e-02, Relative L2=6.743e-01
+2024-10-14 10:14:52.171 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=199, Stagnation=8.463e-02, Relative L2=6.743e-01
+2024-10-14 10:14:58.131 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=200, Stagnation=9.316e-02, Relative L2=6.743e-01
+2024-10-14 10:15:04.097 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=1, Stagnation=1.184e+00, Relative L2=6.915e-01
+2024-10-14 10:15:10.052 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=2, Stagnation=7.505e-01, Relative L2=6.848e-01
+2024-10-14 10:15:15.883 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=3, Stagnation=4.953e-01, Relative L2=6.836e-01
+2024-10-14 10:15:21.596 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=4, Stagnation=2.440e-01, Relative L2=6.832e-01
+2024-10-14 10:15:27.344 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=5, Stagnation=1.664e-01, Relative L2=6.829e-01
+2024-10-14 10:15:33.389 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=6, Stagnation=1.243e-01, Relative L2=6.827e-01
+2024-10-14 10:15:40.112 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=7, Stagnation=1.025e-01, Relative L2=6.825e-01
+2024-10-14 10:15:47.623 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=8, Stagnation=8.966e-02, Relative L2=6.824e-01
+2024-10-14 10:15:55.132 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=9, Stagnation=8.055e-02, Relative L2=6.823e-01
+2024-10-14 10:16:02.604 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=10, Stagnation=7.742e-02, Relative L2=6.822e-01
+2024-10-14 10:16:10.024 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=11, Stagnation=7.628e-02, Relative L2=6.821e-01
+2024-10-14 10:16:17.439 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=12, Stagnation=7.459e-02, Relative L2=6.820e-01
+2024-10-14 10:16:24.118 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=13, Stagnation=7.278e-02, Relative L2=6.819e-01
+2024-10-14 10:16:30.718 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=14, Stagnation=7.105e-02, Relative L2=6.818e-01
+2024-10-14 10:16:38.152 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=15, Stagnation=6.954e-02, Relative L2=6.817e-01
+2024-10-14 10:16:44.835 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=16, Stagnation=6.831e-02, Relative L2=6.817e-01
+2024-10-14 10:16:51.175 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=17, Stagnation=6.708e-02, Relative L2=6.816e-01
+2024-10-14 10:16:57.678 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=18, Stagnation=6.582e-02, Relative L2=6.815e-01
+2024-10-14 10:17:03.464 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=19, Stagnation=6.472e-02, Relative L2=6.814e-01
+2024-10-14 10:17:09.222 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=20, Stagnation=6.384e-02, Relative L2=6.814e-01
+2024-10-14 10:17:14.978 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=21, Stagnation=6.313e-02, Relative L2=6.813e-01
+2024-10-14 10:17:20.736 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=22, Stagnation=6.256e-02, Relative L2=6.812e-01
+2024-10-14 10:17:26.481 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=23, Stagnation=6.208e-02, Relative L2=6.811e-01
+2024-10-14 10:17:32.238 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=24, Stagnation=6.166e-02, Relative L2=6.811e-01
+2024-10-14 10:17:37.996 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=25, Stagnation=6.127e-02, Relative L2=6.810e-01
+2024-10-14 10:17:43.751 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=26, Stagnation=6.090e-02, Relative L2=6.809e-01
+2024-10-14 10:17:49.508 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=27, Stagnation=6.056e-02, Relative L2=6.809e-01
+2024-10-14 10:17:55.269 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=28, Stagnation=6.026e-02, Relative L2=6.808e-01
+2024-10-14 10:18:01.026 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=29, Stagnation=6.002e-02, Relative L2=6.807e-01
+2024-10-14 10:18:06.782 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=30, Stagnation=5.985e-02, Relative L2=6.807e-01
+2024-10-14 10:18:12.537 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=31, Stagnation=5.976e-02, Relative L2=6.806e-01
+2024-10-14 10:18:18.301 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=32, Stagnation=5.976e-02, Relative L2=6.805e-01
+2024-10-14 10:18:24.062 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=33, Stagnation=5.984e-02, Relative L2=6.805e-01
+2024-10-14 10:18:29.819 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=34, Stagnation=6.002e-02, Relative L2=6.804e-01
+2024-10-14 10:18:35.583 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=35, Stagnation=6.027e-02, Relative L2=6.803e-01
+2024-10-14 10:18:41.425 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=36, Stagnation=6.059e-02, Relative L2=6.803e-01
+2024-10-14 10:18:48.277 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=37, Stagnation=6.099e-02, Relative L2=6.802e-01
+2024-10-14 10:18:55.069 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=38, Stagnation=6.146e-02, Relative L2=6.802e-01
+2024-10-14 10:19:01.930 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=39, Stagnation=6.203e-02, Relative L2=6.801e-01
+2024-10-14 10:19:08.687 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=40, Stagnation=6.275e-02, Relative L2=6.800e-01
+2024-10-14 10:19:14.746 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=41, Stagnation=6.372e-02, Relative L2=6.800e-01
+2024-10-14 10:19:21.074 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=42, Stagnation=6.503e-02, Relative L2=6.799e-01
+2024-10-14 10:19:27.402 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=43, Stagnation=6.647e-02, Relative L2=6.798e-01
+2024-10-14 10:19:33.401 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=44, Stagnation=6.720e-02, Relative L2=6.798e-01
+2024-10-14 10:19:39.412 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=45, Stagnation=6.656e-02, Relative L2=6.797e-01
+2024-10-14 10:19:45.019 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=46, Stagnation=6.539e-02, Relative L2=6.796e-01
+2024-10-14 10:19:50.622 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=47, Stagnation=6.455e-02, Relative L2=6.796e-01
+2024-10-14 10:19:56.233 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=48, Stagnation=6.407e-02, Relative L2=6.795e-01
+2024-10-14 10:20:01.845 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=49, Stagnation=6.376e-02, Relative L2=6.794e-01
+2024-10-14 10:20:07.565 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=50, Stagnation=6.350e-02, Relative L2=6.794e-01
+2024-10-14 10:20:13.164 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=51, Stagnation=6.325e-02, Relative L2=6.793e-01
+2024-10-14 10:20:18.759 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=52, Stagnation=6.296e-02, Relative L2=6.793e-01
+2024-10-14 10:20:24.364 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=53, Stagnation=6.263e-02, Relative L2=6.792e-01
+2024-10-14 10:20:30.104 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=54, Stagnation=6.222e-02, Relative L2=6.791e-01
+2024-10-14 10:20:35.766 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=55, Stagnation=6.172e-02, Relative L2=6.791e-01
+2024-10-14 10:20:41.398 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=56, Stagnation=6.113e-02, Relative L2=6.790e-01
+2024-10-14 10:20:47.177 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=57, Stagnation=6.045e-02, Relative L2=6.789e-01
+2024-10-14 10:20:52.845 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=58, Stagnation=5.971e-02, Relative L2=6.789e-01
+2024-10-14 10:20:58.502 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=59, Stagnation=5.896e-02, Relative L2=6.788e-01
+2024-10-14 10:21:04.392 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=60, Stagnation=5.823e-02, Relative L2=6.788e-01
+2024-10-14 10:21:10.086 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=61, Stagnation=5.755e-02, Relative L2=6.787e-01
+2024-10-14 10:21:15.791 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=62, Stagnation=5.693e-02, Relative L2=6.786e-01
+2024-10-14 10:21:21.477 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=63, Stagnation=5.638e-02, Relative L2=6.786e-01
+2024-10-14 10:21:27.169 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=64, Stagnation=5.591e-02, Relative L2=6.785e-01
+2024-10-14 10:21:32.857 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=65, Stagnation=5.552e-02, Relative L2=6.785e-01
+2024-10-14 10:21:38.537 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=66, Stagnation=5.521e-02, Relative L2=6.784e-01
+2024-10-14 10:21:44.205 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=67, Stagnation=5.499e-02, Relative L2=6.784e-01
+2024-10-14 10:21:49.937 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=68, Stagnation=5.486e-02, Relative L2=6.783e-01
+2024-10-14 10:21:55.668 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=69, Stagnation=5.481e-02, Relative L2=6.783e-01
+2024-10-14 10:22:01.402 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=70, Stagnation=5.484e-02, Relative L2=6.782e-01
+2024-10-14 10:22:07.141 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=71, Stagnation=5.494e-02, Relative L2=6.782e-01
+2024-10-14 10:22:12.880 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=72, Stagnation=5.509e-02, Relative L2=6.782e-01
+2024-10-14 10:22:18.617 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=73, Stagnation=5.529e-02, Relative L2=6.781e-01
+2024-10-14 10:22:24.353 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=74, Stagnation=5.552e-02, Relative L2=6.781e-01
+2024-10-14 10:22:30.093 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=75, Stagnation=5.578e-02, Relative L2=6.780e-01
+2024-10-14 10:22:35.833 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=76, Stagnation=5.606e-02, Relative L2=6.780e-01
+2024-10-14 10:22:41.885 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=77, Stagnation=5.638e-02, Relative L2=6.779e-01
+2024-10-14 10:22:47.625 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=78, Stagnation=5.672e-02, Relative L2=6.779e-01
+2024-10-14 10:22:53.363 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=79, Stagnation=5.708e-02, Relative L2=6.779e-01
+2024-10-14 10:22:59.099 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=80, Stagnation=5.745e-02, Relative L2=6.778e-01
+2024-10-14 10:23:04.836 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=81, Stagnation=5.783e-02, Relative L2=6.778e-01
+2024-10-14 10:23:10.572 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=82, Stagnation=5.820e-02, Relative L2=6.777e-01
+2024-10-14 10:23:16.303 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=83, Stagnation=5.857e-02, Relative L2=6.777e-01
+2024-10-14 10:23:22.038 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=84, Stagnation=5.892e-02, Relative L2=6.777e-01
+2024-10-14 10:23:27.774 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=85, Stagnation=5.926e-02, Relative L2=6.776e-01
+2024-10-14 10:23:33.511 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=86, Stagnation=5.959e-02, Relative L2=6.776e-01
+2024-10-14 10:23:39.415 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=87, Stagnation=5.991e-02, Relative L2=6.776e-01
+2024-10-14 10:23:45.472 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=88, Stagnation=6.023e-02, Relative L2=6.775e-01
+2024-10-14 10:23:52.273 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=89, Stagnation=6.054e-02, Relative L2=6.775e-01
+2024-10-14 10:23:59.431 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=90, Stagnation=6.085e-02, Relative L2=6.774e-01
+2024-10-14 10:24:06.274 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=91, Stagnation=6.114e-02, Relative L2=6.774e-01
+2024-10-14 10:24:12.504 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=92, Stagnation=6.142e-02, Relative L2=6.774e-01
+2024-10-14 10:24:18.253 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=93, Stagnation=6.167e-02, Relative L2=6.773e-01
+2024-10-14 10:24:23.813 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=94, Stagnation=6.190e-02, Relative L2=6.773e-01
+2024-10-14 10:24:29.513 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=95, Stagnation=6.209e-02, Relative L2=6.772e-01
+2024-10-14 10:24:35.113 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=96, Stagnation=6.226e-02, Relative L2=6.772e-01
+2024-10-14 10:24:40.708 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=97, Stagnation=6.238e-02, Relative L2=6.772e-01
+2024-10-14 10:24:46.613 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=98, Stagnation=6.247e-02, Relative L2=6.771e-01
+2024-10-14 10:24:52.212 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=99, Stagnation=6.253e-02, Relative L2=6.771e-01
+2024-10-14 10:24:57.845 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=100, Stagnation=6.256e-02, Relative L2=6.771e-01
+2024-10-14 10:25:03.477 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=101, Stagnation=6.256e-02, Relative L2=6.770e-01
+2024-10-14 10:25:09.110 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=102, Stagnation=6.254e-02, Relative L2=6.770e-01
+2024-10-14 10:25:14.737 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=103, Stagnation=6.250e-02, Relative L2=6.769e-01
+2024-10-14 10:25:20.347 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=104, Stagnation=6.242e-02, Relative L2=6.769e-01
+2024-10-14 10:25:25.961 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=105, Stagnation=6.228e-02, Relative L2=6.769e-01
+2024-10-14 10:25:31.579 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=106, Stagnation=6.207e-02, Relative L2=6.768e-01
+2024-10-14 10:25:37.192 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=107, Stagnation=6.176e-02, Relative L2=6.768e-01
+2024-10-14 10:25:42.821 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=108, Stagnation=6.135e-02, Relative L2=6.767e-01
+2024-10-14 10:25:48.454 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=109, Stagnation=6.088e-02, Relative L2=6.767e-01
+2024-10-14 10:25:54.085 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=110, Stagnation=6.036e-02, Relative L2=6.767e-01
+2024-10-14 10:25:59.941 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=111, Stagnation=5.982e-02, Relative L2=6.766e-01
+2024-10-14 10:26:05.580 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=112, Stagnation=5.925e-02, Relative L2=6.766e-01
+2024-10-14 10:26:11.368 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=113, Stagnation=5.867e-02, Relative L2=6.766e-01
+2024-10-14 10:26:17.019 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=114, Stagnation=5.810e-02, Relative L2=6.765e-01
+2024-10-14 10:26:22.673 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=115, Stagnation=5.754e-02, Relative L2=6.765e-01
+2024-10-14 10:26:28.324 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=116, Stagnation=5.702e-02, Relative L2=6.764e-01
+2024-10-14 10:26:33.979 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=117, Stagnation=5.652e-02, Relative L2=6.764e-01
+2024-10-14 10:26:39.651 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=118, Stagnation=5.603e-02, Relative L2=6.764e-01
+2024-10-14 10:26:45.539 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=119, Stagnation=5.556e-02, Relative L2=6.764e-01
+2024-10-14 10:26:51.221 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=120, Stagnation=5.509e-02, Relative L2=6.763e-01
+2024-10-14 10:26:56.914 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=121, Stagnation=5.463e-02, Relative L2=6.763e-01
+2024-10-14 10:27:02.724 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=122, Stagnation=5.419e-02, Relative L2=6.763e-01
+2024-10-14 10:27:08.394 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=123, Stagnation=5.375e-02, Relative L2=6.762e-01
+2024-10-14 10:27:14.185 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=124, Stagnation=5.334e-02, Relative L2=6.762e-01
+2024-10-14 10:27:19.877 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=125, Stagnation=5.294e-02, Relative L2=6.762e-01
+2024-10-14 10:27:25.718 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=126, Stagnation=5.258e-02, Relative L2=6.761e-01
+2024-10-14 10:27:31.423 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=127, Stagnation=5.226e-02, Relative L2=6.761e-01
+2024-10-14 10:27:36.993 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=128, Stagnation=5.198e-02, Relative L2=6.761e-01
+2024-10-14 10:27:42.716 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=129, Stagnation=5.176e-02, Relative L2=6.761e-01
+2024-10-14 10:27:48.523 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=130, Stagnation=5.162e-02, Relative L2=6.760e-01
+2024-10-14 10:27:54.379 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=131, Stagnation=5.156e-02, Relative L2=6.760e-01
+2024-10-14 10:28:00.435 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=132, Stagnation=5.159e-02, Relative L2=6.760e-01
+2024-10-14 10:28:06.190 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=133, Stagnation=5.176e-02, Relative L2=6.760e-01
+2024-10-14 10:28:11.947 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=134, Stagnation=5.209e-02, Relative L2=6.760e-01
+2024-10-14 10:28:17.709 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=135, Stagnation=5.260e-02, Relative L2=6.759e-01
+2024-10-14 10:28:24.326 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=136, Stagnation=5.361e-02, Relative L2=6.759e-01
+2024-10-14 10:28:31.837 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=137, Stagnation=5.581e-02, Relative L2=6.759e-01
+2024-10-14 10:28:39.347 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=138, Stagnation=5.900e-02, Relative L2=6.759e-01
+2024-10-14 10:28:46.855 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=139, Stagnation=6.050e-02, Relative L2=6.759e-01
+2024-10-14 10:28:54.363 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=140, Stagnation=6.024e-02, Relative L2=6.758e-01
+2024-10-14 10:29:01.814 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=141, Stagnation=5.967e-02, Relative L2=6.758e-01
+2024-10-14 10:29:07.795 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=142, Stagnation=5.958e-02, Relative L2=6.758e-01
+2024-10-14 10:29:13.796 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=143, Stagnation=5.989e-02, Relative L2=6.758e-01
+2024-10-14 10:29:19.939 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=144, Stagnation=6.053e-02, Relative L2=6.758e-01
+2024-10-14 10:29:27.399 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=145, Stagnation=6.142e-02, Relative L2=6.757e-01
+2024-10-14 10:29:34.862 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=146, Stagnation=6.260e-02, Relative L2=6.757e-01
+2024-10-14 10:29:41.151 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=147, Stagnation=6.401e-02, Relative L2=6.757e-01
+2024-10-14 10:29:47.239 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=148, Stagnation=6.560e-02, Relative L2=6.757e-01
+2024-10-14 10:29:53.321 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=149, Stagnation=6.733e-02, Relative L2=6.757e-01
+2024-10-14 10:29:59.093 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=150, Stagnation=6.896e-02, Relative L2=6.756e-01
+2024-10-14 10:30:04.866 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=151, Stagnation=7.050e-02, Relative L2=6.756e-01
+2024-10-14 10:30:10.729 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=152, Stagnation=7.175e-02, Relative L2=6.756e-01
+2024-10-14 10:30:16.649 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=153, Stagnation=7.247e-02, Relative L2=6.756e-01
+2024-10-14 10:30:22.537 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=154, Stagnation=7.272e-02, Relative L2=6.755e-01
+2024-10-14 10:30:28.246 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=155, Stagnation=7.252e-02, Relative L2=6.755e-01
+2024-10-14 10:30:34.479 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=156, Stagnation=7.199e-02, Relative L2=6.755e-01
+2024-10-14 10:30:40.248 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=157, Stagnation=7.114e-02, Relative L2=6.755e-01
+2024-10-14 10:30:46.089 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=158, Stagnation=7.013e-02, Relative L2=6.754e-01
+2024-10-14 10:30:52.180 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=159, Stagnation=6.909e-02, Relative L2=6.754e-01
+2024-10-14 10:30:57.972 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=160, Stagnation=6.812e-02, Relative L2=6.754e-01
+2024-10-14 10:31:03.909 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=161, Stagnation=6.706e-02, Relative L2=6.754e-01
+2024-10-14 10:31:09.877 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=162, Stagnation=6.622e-02, Relative L2=6.754e-01
+2024-10-14 10:31:16.206 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=163, Stagnation=6.517e-02, Relative L2=6.753e-01
+2024-10-14 10:31:21.955 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=164, Stagnation=6.435e-02, Relative L2=6.753e-01
+2024-10-14 10:31:27.985 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=165, Stagnation=6.350e-02, Relative L2=6.753e-01
+2024-10-14 10:31:34.015 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=166, Stagnation=6.272e-02, Relative L2=6.753e-01
+2024-10-14 10:31:40.049 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=167, Stagnation=6.198e-02, Relative L2=6.752e-01
+2024-10-14 10:31:46.074 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=168, Stagnation=6.137e-02, Relative L2=6.752e-01
+2024-10-14 10:31:52.092 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=169, Stagnation=6.036e-02, Relative L2=6.752e-01
+2024-10-14 10:31:57.998 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=170, Stagnation=5.967e-02, Relative L2=6.752e-01
+2024-10-14 10:32:03.857 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=171, Stagnation=5.883e-02, Relative L2=6.752e-01
+2024-10-14 10:32:09.734 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=172, Stagnation=5.842e-02, Relative L2=6.751e-01
+2024-10-14 10:32:15.561 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=173, Stagnation=5.756e-02, Relative L2=6.751e-01
+2024-10-14 10:32:21.269 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=174, Stagnation=5.770e-02, Relative L2=6.751e-01
+2024-10-14 10:32:27.134 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=175, Stagnation=5.650e-02, Relative L2=6.751e-01
+2024-10-14 10:32:32.908 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=176, Stagnation=5.653e-02, Relative L2=6.751e-01
+2024-10-14 10:32:38.757 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=177, Stagnation=5.707e-02, Relative L2=6.750e-01
+2024-10-14 10:32:44.338 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=178, Stagnation=5.635e-02, Relative L2=6.750e-01
+2024-10-14 10:32:50.221 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=179, Stagnation=5.624e-02, Relative L2=6.750e-01
+2024-10-14 10:32:56.032 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=180, Stagnation=5.560e-02, Relative L2=6.750e-01
+2024-10-14 10:33:01.832 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=181, Stagnation=5.651e-02, Relative L2=6.750e-01
+2024-10-14 10:33:07.620 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=182, Stagnation=5.532e-02, Relative L2=6.749e-01
+2024-10-14 10:33:13.283 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=183, Stagnation=5.595e-02, Relative L2=6.749e-01
+2024-10-14 10:33:18.949 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=184, Stagnation=5.510e-02, Relative L2=6.749e-01
+2024-10-14 10:33:24.916 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=185, Stagnation=5.916e-02, Relative L2=6.749e-01
+2024-10-14 10:33:30.888 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=186, Stagnation=5.834e-02, Relative L2=6.749e-01
+2024-10-14 10:33:36.649 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=187, Stagnation=5.882e-02, Relative L2=6.749e-01
+2024-10-14 10:33:42.554 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=188, Stagnation=6.663e-02, Relative L2=6.748e-01
+2024-10-14 10:33:48.308 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=189, Stagnation=6.039e-02, Relative L2=6.748e-01
+2024-10-14 10:33:54.069 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=190, Stagnation=7.523e-02, Relative L2=6.748e-01
+2024-10-14 10:33:59.824 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=191, Stagnation=6.501e-02, Relative L2=6.748e-01
+2024-10-14 10:34:05.699 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=192, Stagnation=7.034e-02, Relative L2=6.748e-01
+2024-10-14 10:34:11.451 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=193, Stagnation=8.730e-02, Relative L2=6.748e-01
+2024-10-14 10:34:17.202 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=194, Stagnation=8.503e-02, Relative L2=6.747e-01
+2024-10-14 10:34:22.961 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=195, Stagnation=1.015e-01, Relative L2=6.747e-01
+2024-10-14 10:34:28.715 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=196, Stagnation=1.041e-01, Relative L2=6.747e-01
+2024-10-14 10:34:35.342 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=197, Stagnation=1.229e-01, Relative L2=6.747e-01
+2024-10-14 10:34:42.574 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=198, Stagnation=1.297e-01, Relative L2=6.747e-01
+2024-10-14 10:34:49.734 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=199, Stagnation=1.190e-01, Relative L2=6.747e-01
+2024-10-14 10:34:57.243 | DEBUG    | flow_matching.tt.als:als_tt:213 - Iteration=200, Stagnation=1.225e-01, Relative L2=6.746e-01
+2024-10-14 10:34:57.244 | INFO     | flow_matching.training:train_tt_recflow:160 - Training time for TT-Recflow = 2327 seconds
+2024-10-14 10:34:57.244 | INFO     | __main__:<module>:286 - ***Memory Size Comparison***
+
+2024-10-14 10:34:57.245 | INFO     | __main__:<module>:287 - For NN-RecFlow , numel = 10702
+2024-10-14 10:34:57.245 | INFO     | __main__:<module>:288 - For TT-Recflow , numel = 4000
+2024-10-14 10:34:57.245 | INFO     | __main__:<module>:289 - Memory compression ratio = -0.626238086339002
+2024-10-14 10:34:57.245 | INFO     | __main__:<module>:299 - TT-RecFlow : Inferring with N_time_steps = 2000 with method rk4
+2024-10-14 10:35:15.086 | INFO     | __main__:<module>:314 - Inference time for TT-RecFlow 17 seconds
+2024-10-14 10:35:15.087 | INFO     | __main__:<module>:328 - No outlier removal is applied
+2024-10-14 10:35:15.088 | INFO     | __main__:<module>:332 - Plotting Generation Results along with metadata
+2024-10-14 10:35:15.088 | INFO     | __main__:<module>:340 - Plotting generated results
+2024-10-14 10:35:25.676 | INFO     | flow_matching.viz:plot_results:191 - Loss value for model : nn = 0.028401458850011878
+2024-10-14 10:35:36.558 | INFO     | flow_matching.viz:plot_results:191 - Loss value for model : tt = 0.06589990058190004
+2024-10-14 10:35:37.816 | INFO     | __main__:<module>:359 - Plotting the generated samples
+2024-10-14 10:35:40.377 | INFO     | __main__:<module>:380 - Plotting the trajectories
+2024-10-14 10:35:43.039 | INFO     | __main__:<module>:407 - Plotting the samples animation
+MovieWriter ffmpeg unavailable; using Pillow instead.
+2024-10-14 10:36:33.700 | INFO     | __main__:<module>:435 - Plotting the velocity field
+MovieWriter ffmpeg unavailable; using Pillow instead.
+
+Process finished with exit code 0
